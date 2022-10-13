@@ -1,0 +1,24 @@
+type Query {
+    getAllCharacters:[Character]!
+    getCharactersByName(name: String!):[Character]
+}
+
+type Character {
+    id: ID!,
+    name: String!,
+    status: String!,
+    species: String!,
+    type: String!,
+    gender:    String!,
+    origin: String!,
+    location: Location,
+    image: String!,
+    episode: [String],
+    url: [String],
+    created: String!
+}
+
+type Location {
+    name: String!,
+    url: String!
+}
