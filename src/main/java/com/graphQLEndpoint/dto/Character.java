@@ -1,12 +1,16 @@
 package com.graphQLEndpoint.dto;
 
-import lombok.Builder;
-import lombok.Data;
 
 import java.util.List;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
+
 @Data
 @Builder
+@AllArgsConstructor
 public class Character {
 
     private Integer id;
@@ -19,7 +23,7 @@ public class Character {
     private Location location;
     private String image;
     private List<String> episode;
-    private String url;
+    private List<String> url;
     private String created;
 
 }

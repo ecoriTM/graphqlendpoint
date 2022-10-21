@@ -10,7 +10,7 @@ type Character {
     species: String!,
     type: String!,
     gender:    String!,
-    origin: String!,
+    origin: Origin,
     location: Location,
     image: String!,
     episode: [String],
@@ -19,6 +19,11 @@ type Character {
 }
 
 type Location {
+    name: String!,
+    url: String!
+}
+
+type Origin {
     name: String!,
     url: String!
 }

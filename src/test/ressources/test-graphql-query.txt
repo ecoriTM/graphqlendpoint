@@ -1,0 +1,28 @@
+query {
+
+
+  getAllCharacters {
+    id,
+    name
+  }
+
+  getCharactersByName(name: "Morty Smith") {
+	  id,
+    name,
+    status,
+    species,
+    type,
+    status,
+    episode,
+    url,
+    gender,
+    episode,
+    created,
+    location{
+      url
+    },
+    origin {
+      url
+    }
+  }
+}

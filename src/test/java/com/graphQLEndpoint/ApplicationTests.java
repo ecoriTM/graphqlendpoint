@@ -1,12 +1,15 @@
 package com.graphQLEndpoint;
 
-import com.graphQLEndpoint.repository.CharacterRepository;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import com.graphQLEndpoint.repository.CharacterRepository;
+
 
 @SpringBootTest
 class ApplicationTests {
@@ -16,8 +19,8 @@ class ApplicationTests {
 
     @Test
     void testCharactersAreSavedInCharacterRepositoryStorage() {
-        assertFalse(characterRepository.getCharacterInMemoryStore().isEmpty());
-        assertEquals(characterRepository.getCharacterInMemoryStore().size(), 4);
+        assertFalse( characterRepository.getCharacterInMemoryStore().isEmpty() );
+        assertEquals( characterRepository.getCharacterInMemoryStore().size(), 4 );
     }
 
     @Test
